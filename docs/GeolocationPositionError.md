@@ -1,0 +1,85 @@
+# GeolocationPositionError API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `GeolocationPositionError`
+- **MDN文档**: [GeolocationPositionError](https://developer.mozilla.org/docs/Web/API/GeolocationPositionError)
+- **规范文档**: [查看规范](https://w3c.github.io/geolocation/#position_error_interface)
+- **标签**: `web-features:geolocation`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// GeolocationPositionError 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('GeolocationPositionError API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 未知 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 未知 |  |
+| Firefox | 未知 |  |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 9 |  |
+| oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 未知 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+
+### Edge
+
+
+### Firefox
+
+
+### Internet Explorer
+
+- **支持版本**: 9
+
+### Safari
+
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查GeolocationPositionError是否支持
+function isGeolocationPositionErrorSupported() {
+    return 'GeolocationPositionError' in window || typeof GeolocationPositionError !== 'undefined';
+}
+
+if (isGeolocationPositionErrorSupported()) {
+    console.log('GeolocationPositionError 支持');
+    // 使用GeolocationPositionError
+} else {
+    console.log('GeolocationPositionError 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// GeolocationPositionError polyfill
+if (!window.GeolocationPositionError) {
+    // 在这里添加polyfill实现
+    console.log('加载GeolocationPositionError polyfill');
+}
+```
+
