@@ -1,0 +1,82 @@
+# CanvasFilter.CanvasFilter API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `CanvasFilter.CanvasFilter`
+- **描述**: `CanvasFilter()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// CanvasFilter.CanvasFilter 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('CanvasFilter.CanvasFilter API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 113 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 不支持 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 不支持 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 113
+- **需要标志**: 
+  - #enable-experimental-web-platform-features: Enabled
+- **支持版本**: 99
+- **移除版本**: 113
+
+### Firefox
+
+- **支持版本**: 不支持
+
+### Safari
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查CanvasFilter.CanvasFilter是否支持
+function isCanvasFilterCanvasFilterSupported() {
+    return 'CanvasFilter' in canvasfilter && typeof canvasfilter.CanvasFilter === 'function';
+}
+
+if (isCanvasFilterCanvasFilterSupported()) {
+    console.log('CanvasFilter.CanvasFilter 支持');
+    // 使用CanvasFilter.CanvasFilter
+} else {
+    console.log('CanvasFilter.CanvasFilter 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// CanvasFilter.CanvasFilter polyfill
+if (!canvasfilter.CanvasFilter) {
+    // 在这里添加polyfill实现
+    console.log('加载CanvasFilter.CanvasFilter polyfill');
+}
+```
+

@@ -1,0 +1,91 @@
+# SerialPort.disconnect_event API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SerialPort.disconnect_event`
+- **MDN文档**: [SerialPort.disconnect_event](https://developer.mozilla.org/docs/Web/API/SerialPort/disconnect_event)
+- **规范文档**: [查看规范](https://wicg.github.io/serial/#dfn-disconnect,https://wicg.github.io/serial/#dom-serialport-ondisconnect)
+- **标签**: `web-features:serial`
+- **描述**: `disconnect` event
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// SerialPort.disconnect_event 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('SerialPort.disconnect_event API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 89 |  |
+| Chrome Android | 不支持 |  |
+| Edge | 同主版本 |  |
+| Firefox | 不支持 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 不支持 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 89
+
+### Chrome Android
+
+- **支持版本**: 不支持
+
+### Firefox
+
+- **支持版本**: 不支持
+
+### Safari
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查SerialPort.disconnect_event是否支持
+function isSerialPortDisconnect_eventSupported() {
+    return 'disconnect_event' in serialport && typeof serialport.disconnect_event === 'function';
+}
+
+if (isSerialPortDisconnect_eventSupported()) {
+    console.log('SerialPort.disconnect_event 支持');
+    // 使用SerialPort.disconnect_event
+} else {
+    console.log('SerialPort.disconnect_event 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// SerialPort.disconnect_event polyfill
+if (!serialport.disconnect_event) {
+    // 在这里添加polyfill实现
+    console.log('加载SerialPort.disconnect_event polyfill');
+}
+```
+
+## 相关子API
+
+该API包含以下子功能：
+
+- **bluetooth_rfcomm**: Bluetooth RFCOMM serial ports dispatch `disconnect` events
+

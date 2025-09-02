@@ -1,0 +1,106 @@
+# Window.blur_event API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Window.blur_event`
+- **MDN文档**: [Window.blur_event](https://developer.mozilla.org/docs/Web/API/Window/blur_event)
+- **规范文档**: [查看规范](https://w3c.github.io/uievents/#event-type-blur,https://html.spec.whatwg.org/multipage/webappapis.html#handler-onblur)
+- **标签**: `web-features:window`
+- **描述**: `blur` event
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Window.blur_event 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Window.blur_event API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 5 |  |
+| Chrome Android | 同主版本 |  |
+| Deno | 不支持 |  |
+| Edge | 12 |  |
+| Firefox | 6 | Apart from firing the event on `window` as other browsers do, Firefox also fires the event on the `d... |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 11 |  |
+| Oculus | 同主版本 |  |
+| Opera | ≤12.1 |  |
+| Opera Android | ≤12.1 |  |
+| Safari | 5.1 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 5
+
+### Deno
+
+- **支持版本**: 不支持
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 6
+- **注意事项**:
+  - Apart from firing the event on `window` as other browsers do, Firefox also fires the event on the `document` object. See [bug 1228802](https://bugzil.la/1228802).
+  - Before Firefox 24, the interface for this event is a plain [`Event`](https://developer.mozilla.org/docs/Web/API/Event), not [`FocusEvent`](https://developer.mozilla.org/docs/Web/API/FocusEvent).
+
+### Internet Explorer
+
+- **支持版本**: 11
+
+### Opera
+
+- **支持版本**: ≤12.1
+
+### Opera Android
+
+- **支持版本**: ≤12.1
+
+### Safari
+
+- **支持版本**: 5.1
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Window.blur_event是否支持
+function isWindowBlur_eventSupported() {
+    return 'blur_event' in window && typeof window.blur_event === 'function';
+}
+
+if (isWindowBlur_eventSupported()) {
+    console.log('Window.blur_event 支持');
+    // 使用Window.blur_event
+} else {
+    console.log('Window.blur_event 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Window.blur_event polyfill
+if (!window.blur_event) {
+    // 在这里添加polyfill实现
+    console.log('加载Window.blur_event polyfill');
+}
+```
+

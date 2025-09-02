@@ -1,0 +1,80 @@
+# CSSStyleRule.insertRule API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `CSSStyleRule.insertRule`
+- **MDN文档**: [CSSStyleRule.insertRule](https://developer.mozilla.org/docs/Web/API/CSSGroupingRule/insertRule)
+- **规范文档**: [查看规范](https://drafts.csswg.org/cssom-1/#dom-cssgroupingrule-insertrule)
+- **标签**: `web-features:nesting`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// CSSStyleRule.insertRule 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('CSSStyleRule.insertRule API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 112 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 117 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 16.5 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 112
+
+### Firefox
+
+- **支持版本**: 117
+
+### Safari
+
+- **支持版本**: 16.5
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查CSSStyleRule.insertRule是否支持
+function isCSSStyleRuleInsertRuleSupported() {
+    return 'insertRule' in cssstylerule && typeof cssstylerule.insertRule === 'function';
+}
+
+if (isCSSStyleRuleInsertRuleSupported()) {
+    console.log('CSSStyleRule.insertRule 支持');
+    // 使用CSSStyleRule.insertRule
+} else {
+    console.log('CSSStyleRule.insertRule 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// CSSStyleRule.insertRule polyfill
+if (!cssstylerule.insertRule) {
+    // 在这里添加polyfill实现
+    console.log('加载CSSStyleRule.insertRule polyfill');
+}
+```
+

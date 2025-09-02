@@ -1,0 +1,101 @@
+# SVGAnimatedPreserveAspectRatio API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SVGAnimatedPreserveAspectRatio`
+- **MDN文档**: [SVGAnimatedPreserveAspectRatio](https://developer.mozilla.org/docs/Web/API/SVGAnimatedPreserveAspectRatio)
+- **规范文档**: [查看规范](https://svgwg.org/svg2-draft/coords.html#InterfaceSVGAnimatedPreserveAspectRatio)
+- **标签**: `web-features:smil-svg-animations`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// SVGAnimatedPreserveAspectRatio 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('SVGAnimatedPreserveAspectRatio API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 5 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 1.5 |  |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 9 |  |
+| Oculus | 同主版本 |  |
+| Opera | ≤12.1 |  |
+| Opera Android | ≤12.1 |  |
+| Safari | 5 |  |
+| Safari iOS | 4 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 5
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 1.5
+
+### Internet Explorer
+
+- **支持版本**: 9
+
+### Opera
+
+- **支持版本**: ≤12.1
+
+### Opera Android
+
+- **支持版本**: ≤12.1
+
+### Safari
+
+- **支持版本**: 5
+
+### Safari iOS
+
+- **支持版本**: 4
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查SVGAnimatedPreserveAspectRatio是否支持
+function isSVGAnimatedPreserveAspectRatioSupported() {
+    return 'SVGAnimatedPreserveAspectRatio' in window || typeof SVGAnimatedPreserveAspectRatio !== 'undefined';
+}
+
+if (isSVGAnimatedPreserveAspectRatioSupported()) {
+    console.log('SVGAnimatedPreserveAspectRatio 支持');
+    // 使用SVGAnimatedPreserveAspectRatio
+} else {
+    console.log('SVGAnimatedPreserveAspectRatio 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// SVGAnimatedPreserveAspectRatio polyfill
+if (!window.SVGAnimatedPreserveAspectRatio) {
+    // 在这里添加polyfill实现
+    console.log('加载SVGAnimatedPreserveAspectRatio polyfill');
+}
+```
+

@@ -1,0 +1,88 @@
+# UIEvent.UIEvent API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `UIEvent.UIEvent`
+- **MDN文档**: [UIEvent.UIEvent](https://developer.mozilla.org/docs/Web/API/UIEvent/UIEvent)
+- **规范文档**: [查看规范](https://w3c.github.io/uievents/#dom-uievent-uievent)
+- **描述**: `UIEvent()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// UIEvent.UIEvent 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('UIEvent.UIEvent API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 26 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 11 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 7 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 1.0 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 26
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 11
+
+### Safari
+
+- **支持版本**: 7
+
+### Samsung Internet
+
+- **支持版本**: 1.0
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查UIEvent.UIEvent是否支持
+function isUIEventUIEventSupported() {
+    return 'UIEvent' in uievent && typeof uievent.UIEvent === 'function';
+}
+
+if (isUIEventUIEventSupported()) {
+    console.log('UIEvent.UIEvent 支持');
+    // 使用UIEvent.UIEvent
+} else {
+    console.log('UIEvent.UIEvent 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// UIEvent.UIEvent polyfill
+if (!uievent.UIEvent) {
+    // 在这里添加polyfill实现
+    console.log('加载UIEvent.UIEvent polyfill');
+}
+```
+

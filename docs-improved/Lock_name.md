@@ -1,0 +1,80 @@
+# Lock.name API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Lock.name`
+- **MDN文档**: [Lock.name](https://developer.mozilla.org/docs/Web/API/Lock/name)
+- **规范文档**: [查看规范](https://w3c.github.io/web-locks/#dom-lock-name)
+- **标签**: `web-features:web-locks`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Lock.name 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Lock.name API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 69 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 96 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 15.4 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 69
+
+### Firefox
+
+- **支持版本**: 96
+
+### Safari
+
+- **支持版本**: 15.4
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Lock.name是否支持
+function isLockNameSupported() {
+    return 'name' in lock && typeof lock.name === 'function';
+}
+
+if (isLockNameSupported()) {
+    console.log('Lock.name 支持');
+    // 使用Lock.name
+} else {
+    console.log('Lock.name 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Lock.name polyfill
+if (!lock.name) {
+    // 在这里添加polyfill实现
+    console.log('加载Lock.name polyfill');
+}
+```
+

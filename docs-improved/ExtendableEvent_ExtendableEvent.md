@@ -1,0 +1,97 @@
+# ExtendableEvent.ExtendableEvent API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `ExtendableEvent.ExtendableEvent`
+- **MDN文档**: [ExtendableEvent.ExtendableEvent](https://developer.mozilla.org/docs/Web/API/ExtendableEvent/ExtendableEvent)
+- **规范文档**: [查看规范](https://w3c.github.io/ServiceWorker/#dom-extendableevent-extendableevent)
+- **标签**: `web-features:service-workers`
+- **描述**: `ExtendableEvent()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// ExtendableEvent.ExtendableEvent 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('ExtendableEvent.ExtendableEvent API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 41 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 17 |  |
+| Firefox | 44 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 24 |  |
+| Opera Android | 24 |  |
+| Safari | 11.1 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 不支持 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 41
+
+### Edge
+
+- **支持版本**: 17
+
+### Firefox
+
+- **支持版本**: 44
+
+### Opera
+
+- **支持版本**: 24
+
+### Opera Android
+
+- **支持版本**: 24
+
+### Safari
+
+- **支持版本**: 11.1
+
+### webview_ios
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查ExtendableEvent.ExtendableEvent是否支持
+function isExtendableEventExtendableEventSupported() {
+    return 'ExtendableEvent' in extendableevent && typeof extendableevent.ExtendableEvent === 'function';
+}
+
+if (isExtendableEventExtendableEventSupported()) {
+    console.log('ExtendableEvent.ExtendableEvent 支持');
+    // 使用ExtendableEvent.ExtendableEvent
+} else {
+    console.log('ExtendableEvent.ExtendableEvent 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// ExtendableEvent.ExtendableEvent polyfill
+if (!extendableevent.ExtendableEvent) {
+    // 在这里添加polyfill实现
+    console.log('加载ExtendableEvent.ExtendableEvent polyfill');
+}
+```
+

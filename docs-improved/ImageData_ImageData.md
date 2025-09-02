@@ -1,0 +1,96 @@
+# ImageData.ImageData API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `ImageData.ImageData`
+- **MDN文档**: [ImageData.ImageData](https://developer.mozilla.org/docs/Web/API/ImageData/ImageData)
+- **规范文档**: [查看规范](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-imagedata,https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-imagedata-with-data)
+- **标签**: `web-features:canvas-2d`
+- **描述**: `ImageData()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// ImageData.ImageData 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('ImageData.ImageData API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 36 |  |
+| Chrome Android | 同主版本 |  |
+| Deno | 1.39 |  |
+| Edge | 14 |  |
+| Firefox | 29 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 8 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 36
+
+### Deno
+
+- **支持版本**: 1.39
+
+### Edge
+
+- **支持版本**: 14
+
+### Firefox
+
+- **支持版本**: 29
+
+### Safari
+
+- **支持版本**: 8
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查ImageData.ImageData是否支持
+function isImageDataImageDataSupported() {
+    return 'ImageData' in imagedata && typeof imagedata.ImageData === 'function';
+}
+
+if (isImageDataImageDataSupported()) {
+    console.log('ImageData.ImageData 支持');
+    // 使用ImageData.ImageData
+} else {
+    console.log('ImageData.ImageData 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// ImageData.ImageData polyfill
+if (!imagedata.ImageData) {
+    // 在这里添加polyfill实现
+    console.log('加载ImageData.ImageData polyfill');
+}
+```
+
+## 相关子API
+
+该API包含以下子功能：
+
+- **settings_parameter**: 查看详细兼容性
+

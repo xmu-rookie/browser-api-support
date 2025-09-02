@@ -1,0 +1,90 @@
+# Element.setCapture API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Element.setCapture`
+- **MDN文档**: [Element.setCapture](https://developer.mozilla.org/docs/Web/API/Element/setCapture)
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Element.setCapture 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Element.setCapture API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 不支持 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 4 |  |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 5 | The `retargetToElement` parameter to `Element.setCapture()` was introduced in Internet Explorer 5.5. |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 不支持 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 不支持
+
+### Edge
+
+- **支持版本**: 12
+- **移除版本**: 79
+
+### Firefox
+
+- **支持版本**: 4
+
+### Internet Explorer
+
+- **支持版本**: 5
+- **注意事项**:
+  - The `retargetToElement` parameter to `Element.setCapture()` was introduced in Internet Explorer 5.5.
+
+### Safari
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Element.setCapture是否支持
+function isElementSetCaptureSupported() {
+    return 'setCapture' in element && typeof element.setCapture === 'function';
+}
+
+if (isElementSetCaptureSupported()) {
+    console.log('Element.setCapture 支持');
+    // 使用Element.setCapture
+} else {
+    console.log('Element.setCapture 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Element.setCapture polyfill
+if (!element.setCapture) {
+    // 在这里添加polyfill实现
+    console.log('加载Element.setCapture polyfill');
+}
+```
+

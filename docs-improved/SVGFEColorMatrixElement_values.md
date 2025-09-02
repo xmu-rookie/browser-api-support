@@ -1,0 +1,97 @@
+# SVGFEColorMatrixElement.values API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SVGFEColorMatrixElement.values`
+- **MDN文档**: [SVGFEColorMatrixElement.values](https://developer.mozilla.org/docs/Web/API/SVGFEColorMatrixElement/values)
+- **规范文档**: [查看规范](https://drafts.fxtf.org/filter-effects/#dom-svgfecolormatrixelement-values)
+- **标签**: `web-features:svg-filters`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// SVGFEColorMatrixElement.values 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('SVGFEColorMatrixElement.values API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 5 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 3 |  |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 10 |  |
+| Oculus | 同主版本 |  |
+| Opera | ≤12.1 |  |
+| Opera Android | ≤12.1 |  |
+| Safari | 6 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 5
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 3
+
+### Internet Explorer
+
+- **支持版本**: 10
+
+### Opera
+
+- **支持版本**: ≤12.1
+
+### Opera Android
+
+- **支持版本**: ≤12.1
+
+### Safari
+
+- **支持版本**: 6
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查SVGFEColorMatrixElement.values是否支持
+function isSVGFEColorMatrixElementValuesSupported() {
+    return 'values' in svgfecolormatrixelement && typeof svgfecolormatrixelement.values === 'function';
+}
+
+if (isSVGFEColorMatrixElementValuesSupported()) {
+    console.log('SVGFEColorMatrixElement.values 支持');
+    // 使用SVGFEColorMatrixElement.values
+} else {
+    console.log('SVGFEColorMatrixElement.values 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// SVGFEColorMatrixElement.values polyfill
+if (!svgfecolormatrixelement.values) {
+    // 在这里添加polyfill实现
+    console.log('加载SVGFEColorMatrixElement.values polyfill');
+}
+```
+

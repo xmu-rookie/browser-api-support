@@ -1,0 +1,83 @@
+# Element.contextmenu_event.type_pointerevent API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Element.contextmenu_event.type_pointerevent`
+- **标签**: `web-features:pointer-events-api`
+- **描述**: Is a `PointerEvent`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Element.contextmenu_event.type_pointerevent 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Element.contextmenu_event.type_pointerevent API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 92 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 129 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 18.2 |  |
+| Safari iOS | 不支持 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 92
+
+### Firefox
+
+- **支持版本**: 129
+
+### Safari
+
+- **支持版本**: 18.2
+
+### Safari iOS
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Element.contextmenu_event.type_pointerevent是否支持
+function isElementContextmenu_eventSupported() {
+    return 'contextmenu_event' in element && typeof element.contextmenu_event === 'function';
+}
+
+if (isElementContextmenu_eventSupported()) {
+    console.log('Element.contextmenu_event.type_pointerevent 支持');
+    // 使用Element.contextmenu_event.type_pointerevent
+} else {
+    console.log('Element.contextmenu_event.type_pointerevent 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Element.contextmenu_event.type_pointerevent polyfill
+if (!element.contextmenu_event) {
+    // 在这里添加polyfill实现
+    console.log('加载Element.contextmenu_event.type_pointerevent polyfill');
+}
+```
+

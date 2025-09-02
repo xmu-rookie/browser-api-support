@@ -1,0 +1,68 @@
+# OfflineAudioContext.OfflineAudioContext API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `OfflineAudioContext.OfflineAudioContext`
+- **MDN文档**: [OfflineAudioContext.OfflineAudioContext](https://developer.mozilla.org/docs/Web/API/OfflineAudioContext/OfflineAudioContext)
+- **规范文档**: [查看规范](https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-offlineaudiocontext)
+- **标签**: `web-features:offline-audio-context`
+- **描述**: `OfflineAudioContext()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// OfflineAudioContext.OfflineAudioContext 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('OfflineAudioContext.OfflineAudioContext API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 35 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 25 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 14.1 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 35
+- **支持版本**: 25
+- **移除版本**: 57
+- **前缀**: webkit
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 25
+
+### Safari
+
+- **支持版本**: 14.1
+- **支持版本**: 7
+- **移除版本**: 14.1
+- **前缀**: webkit
+
+## 相关子API
+
+该API包含以下子功能：
+
+- **options_parameter**: `options` parameter (accepts all parameters as a single dictionary)
+

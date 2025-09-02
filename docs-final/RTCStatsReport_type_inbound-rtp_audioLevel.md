@@ -1,0 +1,57 @@
+# RTCStatsReport.type_inbound-rtp.audioLevel API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `RTCStatsReport.type_inbound-rtp.audioLevel`
+- **MDN文档**: [RTCStatsReport.type_inbound-rtp.audioLevel](https://developer.mozilla.org/docs/Web/API/RTCInboundRtpStreamStats/audioLevel)
+- **规范文档**: [查看规范](https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-audiolevel)
+- **标签**: `web-features:webrtc-stats`
+- **描述**: `audioLevel` in 'inbound-rtp' stats
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// RTCStatsReport.type_inbound-rtp.audioLevel 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('RTCStatsReport.type_inbound-rtp.audioLevel API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 86 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 106 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 14.1 |  |
+| Safari iOS | 不支持 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 86
+
+### Firefox
+
+- **支持版本**: 106
+
+### Safari
+
+- **支持版本**: 14.1
+- **移除版本**: 16.3
+
+### Safari iOS
+
+- **支持版本**: 不支持
+

@@ -1,0 +1,95 @@
+# RTCRtpReceiver.getContributingSources API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `RTCRtpReceiver.getContributingSources`
+- **MDN文档**: [RTCRtpReceiver.getContributingSources](https://developer.mozilla.org/docs/Web/API/RTCRtpReceiver/getContributingSources)
+- **规范文档**: [查看规范](https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcontributingsources)
+- **标签**: `web-features:webrtc`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// RTCRtpReceiver.getContributingSources 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('RTCRtpReceiver.getContributingSources API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 59 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 12 |  |
+| Firefox | 59 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 12.1 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 59
+
+### Edge
+
+- **支持版本**: 12
+
+### Firefox
+
+- **支持版本**: 59
+
+### Safari
+
+- **支持版本**: 12.1
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查RTCRtpReceiver.getContributingSources是否支持
+function isRTCRtpReceiverGetContributingSourcesSupported() {
+    return 'getContributingSources' in rtcrtpreceiver && typeof rtcrtpreceiver.getContributingSources === 'function';
+}
+
+if (isRTCRtpReceiverGetContributingSourcesSupported()) {
+    console.log('RTCRtpReceiver.getContributingSources 支持');
+    // 使用RTCRtpReceiver.getContributingSources
+} else {
+    console.log('RTCRtpReceiver.getContributingSources 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// RTCRtpReceiver.getContributingSources polyfill
+if (!rtcrtpreceiver.getContributingSources) {
+    // 在这里添加polyfill实现
+    console.log('加载RTCRtpReceiver.getContributingSources polyfill');
+}
+```
+
+## 相关子API
+
+该API包含以下子功能：
+
+- **audio_tracks_supported**: Audio tracks supported
+- **audioLevel**: `audioLevel` property in returned object
+- **rtpTimestamp**: `rtpTimestamp` property in returned object
+- **source**: `source` property in returned object
+- **timestamp**: `timestamp` property in returned object
+- **video_tracks_supported**: Video tracks supported
+

@@ -1,0 +1,80 @@
+# Path2D.addPath API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Path2D.addPath`
+- **MDN文档**: [Path2D.addPath](https://developer.mozilla.org/docs/Web/API/Path2D/addPath)
+- **规范文档**: [查看规范](https://html.spec.whatwg.org/multipage/canvas.html#dom-path2d-addpath-dev)
+- **标签**: `web-features:canvas-2d`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Path2D.addPath 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Path2D.addPath API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 68 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 34 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 9 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 68
+
+### Firefox
+
+- **支持版本**: 34
+
+### Safari
+
+- **支持版本**: 9
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Path2D.addPath是否支持
+function isPath2DAddPathSupported() {
+    return 'addPath' in path2d && typeof path2d.addPath === 'function';
+}
+
+if (isPath2DAddPathSupported()) {
+    console.log('Path2D.addPath 支持');
+    // 使用Path2D.addPath
+} else {
+    console.log('Path2D.addPath 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Path2D.addPath polyfill
+if (!path2d.addPath) {
+    // 在这里添加polyfill实现
+    console.log('加载Path2D.addPath polyfill');
+}
+```
+

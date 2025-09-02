@@ -1,0 +1,81 @@
+# Accelerometer.Accelerometer API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `Accelerometer.Accelerometer`
+- **MDN文档**: [Accelerometer.Accelerometer](https://developer.mozilla.org/docs/Web/API/Accelerometer/Accelerometer)
+- **规范文档**: [查看规范](https://w3c.github.io/accelerometer/#dom-accelerometer-accelerometer)
+- **标签**: `web-features:accelerometer`
+- **描述**: `Accelerometer()` constructor
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// Accelerometer.Accelerometer 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('Accelerometer.Accelerometer API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 67 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 同主版本 |  |
+| Firefox | 不支持 |  |
+| Firefox Android | 同主版本 |  |
+| Oculus | 同主版本 |  |
+| Opera | 同主版本 |  |
+| Opera Android | 同主版本 |  |
+| Safari | 不支持 |  |
+| Safari iOS | 同主版本 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+- **支持版本**: 67
+
+### Firefox
+
+- **支持版本**: 不支持
+
+### Safari
+
+- **支持版本**: 不支持
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查Accelerometer.Accelerometer是否支持
+function isAccelerometerAccelerometerSupported() {
+    return 'Accelerometer' in accelerometer && typeof accelerometer.Accelerometer === 'function';
+}
+
+if (isAccelerometerAccelerometerSupported()) {
+    console.log('Accelerometer.Accelerometer 支持');
+    // 使用Accelerometer.Accelerometer
+} else {
+    console.log('Accelerometer.Accelerometer 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// Accelerometer.Accelerometer polyfill
+if (!accelerometer.Accelerometer) {
+    // 在这里添加polyfill实现
+    console.log('加载Accelerometer.Accelerometer polyfill');
+}
+```
+
