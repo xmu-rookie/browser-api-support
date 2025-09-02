@@ -107,33 +107,14 @@ function generateApiMarkdown(apiName, compat, fileName, fullApiData = null) {
     
     md += `\n`;
     
-    // 使用示例
-    md += `## 使用示例\n\n`;
-    md += `### 基本用法\n\n`;
-    md += `\`\`\`javascript\n`;
-    
-    // 根据API名称生成特定的使用示例
-    if (apiName.includes('vibrate')) {
-        md += `// 使用振动API\n// 振动200毫秒\nnavigator.vibrate(200);\n\n// 振动模式：振动-停止-振动\nnavigator.vibrate([200, 100, 200]);\n`;
-    } else if (apiName.includes('geolocation')) {
-        md += `// 获取地理位置\nnavigator.geolocation.getCurrentPosition(\n    function(position) {\n        console.log('纬度:', position.coords.latitude);\n        console.log('经度:', position.coords.longitude);\n    },\n    function(error) {\n        console.error('获取位置失败:', error);\n    }\n);\n`;
-    } else if (apiName.includes('share')) {
-        md += `// 使用Web Share API\nnavigator.share({\n    title: '分享标题',\n    text: '分享内容',\n    url: 'https://example.com'\n}).then(() => {\n    console.log('分享成功');\n}).catch(err => {\n    console.error('分享失败:', err);\n});\n`;
-    } else if (apiName.includes('clipboard')) {
-        md += `// 使用剪贴板API\n// 写入剪贴板\nnavigator.clipboard.writeText('复制的文本').then(() => {\n    console.log('文本已复制到剪贴板');\n});\n\n// 读取剪贴板\nnavigator.clipboard.readText().then(text => {\n    console.log('剪贴板内容:', text);\n});\n`;
-    } else if (apiName.includes('serviceWorker')) {
-        md += `// 注册Service Worker\nnavigator.serviceWorker.register('/sw.js')\n    .then(registration => {\n        console.log('SW 注册成功:', registration);\n    })\n    .catch(error => {\n        console.log('SW 注册失败:', error);\n    });\n`;
-    } else {
-        md += `// ${apiName} 使用示例\n// 请查阅MDN文档了解具体用法\nconsole.log('${apiName} API');\n`;
-    }
-    
-    md += `\`\`\`\n\n`;
-    
-    // 浏览器兼容性
+    // 浏览器兼容性数据
     if (compat.support) {
-        md += generateCompatibilityTable(compat.support);
-        md += generateDetailedCompatibility(compat.support);
+        md += `## 浏览器兼容性数据\n\n\`\`\`javascript\n`;
+        md += generateCompatibilityData(compat.support);
+        md += `\`\`\`\n\n`;
     }
+
+
     
     // 特性检测和Polyfill功能已移除，保持代码简洁
     
@@ -156,6 +137,71 @@ function generateApiMarkdown(apiName, compat, fileName, fullApiData = null) {
     }
     
     return md;
+}
+
+// 生成包含兼容性信息的JavaScript对象
+function generateCompatibilityData(support) {
+    let compatData = `// 浏览器兼容性数据\nconst browserSupport = {\n`;
+    
+    Object.keys(support).forEach(browser => {
+        const browserInfo = support[browser];
+        const browserKey = browser.replace(/[^a-zA-Z0-9]/g, '_'); // 转换为有效的JS属性名
+        let version = '';
+        let notes = '';
+        
+        if (typeof browserInfo === 'string' && browserInfo === 'mirror') {
+            version = '同主版本';
+        } else if (typeof browserInfo === 'object' && browserInfo !== null) {
+            if (Array.isArray(browserInfo)) {
+                const latestInfo = browserInfo[0];
+                if (latestInfo.version_added === false) {
+                    version = false;
+                } else if (latestInfo.version_added === true) {
+                    version = true;
+                } else {
+                    version = latestInfo.version_added || null;
+                }
+                if (latestInfo.notes) {
+                    if (Array.isArray(latestInfo.notes)) {
+                        notes = latestInfo.notes.join('; ');
+                    } else if (typeof latestInfo.notes === 'string') {
+                        notes = latestInfo.notes;
+                    }
+                }
+            } else {
+                if (browserInfo.version_added === false) {
+                    version = false;
+                } else if (browserInfo.version_added === true) {
+                    version = true;
+                } else {
+                    version = browserInfo.version_added || null;
+                }
+                if (browserInfo.notes) {
+                    if (Array.isArray(browserInfo.notes)) {
+                        notes = browserInfo.notes.join('; ');
+                    } else if (typeof browserInfo.notes === 'string') {
+                        notes = browserInfo.notes;
+                    }
+                }
+            }
+        }
+        
+        compatData += `    ${browserKey}: `;
+        if (typeof version === 'string') {
+            compatData += `"${version}"`;
+        } else {
+            compatData += version;
+        }
+        
+        if (notes && notes.length < 200) { // 包含简短注释
+            const cleanNotes = notes.replace(/"/g, '\\"').substring(0, 100);
+            compatData += `, // ${cleanNotes}${notes.length > 100 ? '...' : ''}`;
+        }
+        compatData += `,\n`;
+    });
+    
+    compatData += `};\n\n`;
+    return compatData;
 }
 
 // 生成兼容性表格

@@ -1,0 +1,31 @@
+# TextTrack.id API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `TextTrack.id`
+- **MDN文档**: [TextTrack.id](https://developer.mozilla.org/docs/Web/API/TextTrack/id)
+- **规范文档**: [查看规范](https://html.spec.whatwg.org/multipage/media.html#dom-texttrack-id-dev)
+- **标签**: `web-features:text-tracks`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "33",
+    chrome_android: "同主版本",
+    edge: "18",
+    firefox: "31",
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "8",
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: "同主版本",
+    webview_ios: "同主版本",
+};
+
+```
+

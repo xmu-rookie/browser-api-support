@@ -1,0 +1,39 @@
+# RTCPeerConnection.setLocalDescription API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `RTCPeerConnection.setLocalDescription`
+- **MDN文档**: [RTCPeerConnection.setLocalDescription](https://developer.mozilla.org/docs/Web/API/RTCPeerConnection/setLocalDescription)
+- **规范文档**: [查看规范](https://w3c.github.io/webrtc-pc/#dom-peerconnection-setlocaldescription)
+- **标签**: `web-features:webrtc`
+- **描述**: `setLocalDescription()`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "24",
+    chrome_android: "同主版本",
+    edge: "15",
+    firefox: "22", // Firefox does not support descriptions of type `pranswer`.,
+    firefox_android: "24", // Firefox does not support descriptions of type `pranswer`.,
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "11",
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: "同主版本",
+    webview_ios: "同主版本",
+};
+
+```
+
+## 相关子API
+
+该API包含以下子功能：
+
+- **description_parameter_optional**: `description` parameter is optional
+- **returns_promise**: Returns a `Promise`
+

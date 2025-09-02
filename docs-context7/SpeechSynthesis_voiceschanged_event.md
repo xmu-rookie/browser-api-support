@@ -1,0 +1,32 @@
+# SpeechSynthesis.voiceschanged_event API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SpeechSynthesis.voiceschanged_event`
+- **MDN文档**: [SpeechSynthesis.voiceschanged_event](https://developer.mozilla.org/docs/Web/API/SpeechSynthesis/voiceschanged_event)
+- **规范文档**: [查看规范](https://webaudio.github.io/web-speech-api/#eventdef-speechsynthesis-voiceschanged,https://webaudio.github.io/web-speech-api/#dom-speechsynthesis-onvoiceschanged)
+- **标签**: `web-features:speech-synthesis`
+- **描述**: `voiceschanged` event
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "33",
+    chrome_android: "同主版本",
+    edge: "14",
+    firefox: "49",
+    firefox_android: "62",
+    oculus: "同主版本",
+    opera: "21",
+    opera_android: false,
+    safari: "16",
+    safari_ios: "同主版本",
+    samsunginternet_android: "3.0",
+    webview_android: false,
+    webview_ios: "同主版本",
+};
+
+```
+

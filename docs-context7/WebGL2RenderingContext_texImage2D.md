@@ -1,0 +1,31 @@
+# WebGL2RenderingContext.texImage2D API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `WebGL2RenderingContext.texImage2D`
+- **MDN文档**: [WebGL2RenderingContext.texImage2D](https://developer.mozilla.org/docs/Web/API/WebGLRenderingContext/texImage2D)
+- **规范文档**: [查看规范](https://registry.khronos.org/webgl/specs/latest/1.0/#5.14.8,https://registry.khronos.org/webgl/specs/latest/2.0/#3.7.6)
+- **标签**: `web-features:webgl2`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "56",
+    chrome_android: "58",
+    edge: "同主版本",
+    firefox: "51",
+    firefox_android: "51", // Textures from video elements are not supported. See [bug 1884282](https://bugzil.la/1884282).,
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "15",
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: "同主版本",
+    webview_ios: "同主版本",
+};
+
+```
+

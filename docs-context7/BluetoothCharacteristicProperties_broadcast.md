@@ -1,0 +1,31 @@
+# BluetoothCharacteristicProperties.broadcast API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `BluetoothCharacteristicProperties.broadcast`
+- **MDN文档**: [BluetoothCharacteristicProperties.broadcast](https://developer.mozilla.org/docs/Web/API/BluetoothCharacteristicProperties/broadcast)
+- **规范文档**: [查看规范](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothcharacteristicproperties-broadcast)
+- **标签**: `web-features:web-bluetooth`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "56",
+    chrome_android: "同主版本",
+    edge: "同主版本",
+    firefox: false,
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: false,
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: false,
+    webview_ios: "同主版本",
+};
+
+```
+

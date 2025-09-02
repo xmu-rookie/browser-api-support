@@ -1,0 +1,31 @@
+# SharedStorageAppendMethod.SharedStorageAppendMethod API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SharedStorageAppendMethod.SharedStorageAppendMethod`
+- **规范文档**: [查看规范](https://wicg.github.io/shared-storage/#dom-sharedstorageappendmethod-sharedstorageappendmethod)
+- **标签**: `web-features:shared-storage-locks`
+- **描述**: `SharedStorageAppendMethod()` constructor
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "134",
+    chrome_android: "同主版本",
+    edge: "同主版本",
+    firefox: false,
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: false,
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: false,
+    webview_ios: "同主版本",
+};
+
+```
+

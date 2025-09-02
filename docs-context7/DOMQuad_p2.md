@@ -1,0 +1,31 @@
+# DOMQuad.p2 API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `DOMQuad.p2`
+- **MDN文档**: [DOMQuad.p2](https://developer.mozilla.org/docs/Web/API/DOMQuad/p2)
+- **规范文档**: [查看规范](https://drafts.fxtf.org/geometry/#dom-domquad-p2)
+- **标签**: `web-features:dom-geometry`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "61",
+    chrome_android: "同主版本",
+    edge: "同主版本",
+    firefox: "31", // Before Firefox 69, the default value of `p1` through `p4` was undefined; now `DOMQuadInit` defines t...,
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "11",
+    safari_ios: "同主版本",
+    samsunginternet_android: "同主版本",
+    webview_android: "同主版本",
+    webview_ios: "同主版本",
+};
+
+```
+

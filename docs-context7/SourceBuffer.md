@@ -1,0 +1,32 @@
+# SourceBuffer API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SourceBuffer`
+- **MDN文档**: [SourceBuffer](https://developer.mozilla.org/docs/Web/API/SourceBuffer)
+- **规范文档**: [查看规范](https://w3c.github.io/media-source/#sourcebuffer)
+- **标签**: `web-features:media-source`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "31",
+    chrome_android: "同主版本",
+    edge: "12",
+    firefox: "42",
+    firefox_android: "同主版本",
+    ie: "11", // Only works on Windows 8+.,
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "8",
+    safari_ios: "13", // Exposed in Mobile Safari on iPad but not on iPhone.,
+    samsunginternet_android: "3.0",
+    webview_android: "同主版本",
+    webview_ios: false,
+};
+
+```
+

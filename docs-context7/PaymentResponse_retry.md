@@ -1,0 +1,31 @@
+# PaymentResponse.retry API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `PaymentResponse.retry`
+- **MDN文档**: [PaymentResponse.retry](https://developer.mozilla.org/docs/Web/API/PaymentResponse/retry)
+- **规范文档**: [查看规范](https://w3c.github.io/payment-request/#dom-paymentresponse-retry)
+- **标签**: `web-features:payment-request`
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: "78",
+    chrome_android: "同主版本",
+    edge: "同主版本",
+    firefox: "55",
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "47",
+    opera_android: "43",
+    safari: "12.1",
+    safari_ios: "11.3",
+    samsunginternet_android: "10.0",
+    webview_android: false,
+    webview_ios: "同主版本",
+};
+
+```
+

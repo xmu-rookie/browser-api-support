@@ -1,0 +1,31 @@
+# ManagedMediaSource.startstreaming_event API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `ManagedMediaSource.startstreaming_event`
+- **规范文档**: [查看规范](https://w3c.github.io/media-source/#dfn-startstreaming)
+- **标签**: `web-features:managed-media-source`
+- **描述**: `startstreaming` event
+
+## 浏览器兼容性数据
+
+```javascript
+// 浏览器兼容性数据
+const browserSupport = {
+    chrome: false,
+    chrome_android: "同主版本",
+    edge: "同主版本",
+    firefox: false,
+    firefox_android: "同主版本",
+    oculus: "同主版本",
+    opera: "同主版本",
+    opera_android: "同主版本",
+    safari: "17",
+    safari_ios: "17.1",
+    samsunginternet_android: "同主版本",
+    webview_android: "同主版本",
+    webview_ios: "同主版本",
+};
+
+```
+
