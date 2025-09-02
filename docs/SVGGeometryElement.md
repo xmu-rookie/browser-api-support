@@ -1,0 +1,97 @@
+# SVGGeometryElement API 兼容性数据
+
+## 基本信息
+
+- **API名称**: `SVGGeometryElement`
+- **MDN文档**: [SVGGeometryElement](https://developer.mozilla.org/docs/Web/API/SVGGeometryElement)
+- **规范文档**: [查看规范](https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement)
+- **标签**: `web-features:svg`
+
+## 使用示例
+
+### 基本用法
+
+```javascript
+// SVGGeometryElement 使用示例
+// 请查阅MDN文档了解具体用法
+console.log('SVGGeometryElement API');
+```
+
+## 浏览器兼容性
+
+| 浏览器 | 支持版本 | 说明 |
+|--------|----------|------|
+| Chrome | 未知 |  |
+| Chrome Android | 同主版本 |  |
+| Edge | 未知 |  |
+| Firefox | 未知 |  |
+| Firefox Android | 同主版本 |  |
+| Internet Explorer | 9 (部分支持) | The `SVGGeometryElement` interface itself is not present, but some of its members are available on the [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) interface. |
+| oculus | 同主版本 |  |
+| Opera | 未知 |  |
+| Opera Android | 未知 |  |
+| Safari | 未知 |  |
+| Safari iOS | 未知 |  |
+| Samsung Internet | 同主版本 |  |
+| WebView Android | 同主版本 |  |
+| webview_ios | 同主版本 |  |
+
+## 详细兼容性信息
+
+### Chrome
+
+
+### Edge
+
+
+### Firefox
+
+
+### Internet Explorer
+
+- **支持版本**: 9
+- **部分实现**: 是
+- **注意事项**:
+  - The `SVGGeometryElement` interface itself is not present, but some of its members are available on the [`SVGPathElement`](https://developer.mozilla.org/docs/Web/API/SVGPathElement) interface.
+
+### Opera
+
+
+### Opera Android
+
+
+### Safari
+
+
+### Safari iOS
+
+
+## 兼容性检查代码
+
+### 特性检测
+
+```javascript
+// 检查SVGGeometryElement是否支持
+function isSVGGeometryElementSupported() {
+    return typeof SVGGeometryElement !== 'undefined';
+}
+
+if (isSVGGeometryElementSupported()) {
+    console.log('SVGGeometryElement 支持');
+    // 使用SVGGeometryElement
+} else {
+    console.log('SVGGeometryElement 不支持，需要polyfill');
+    // 加载polyfill或使用替代方案
+}
+```
+
+### Polyfill示例
+
+```javascript
+// SVGGeometryElement polyfill
+if (!window.SVGGeometryElement) {
+    // 在这里添加polyfill实现
+    console.log('加载SVGGeometryElement polyfill');
+}
+```
+
